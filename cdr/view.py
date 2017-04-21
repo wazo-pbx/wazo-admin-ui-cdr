@@ -6,11 +6,12 @@ from __future__ import unicode_literals
 
 from flask_menu.classy import classy_menu_item
 
-from wazo_admin_ui.helpers.classful import BaseView
+from wazo_admin_ui.helpers.classful import BaseView, IndexAjaxViewMixin
 
 
-class CdrView(BaseView):
+class CdrView(IndexAjaxViewMixin, BaseView):
 
+    form = object
     resource = 'cdr'
 
     @classy_menu_item('.cdrs', 'CDR', order=4, icon="newspaper-o")
