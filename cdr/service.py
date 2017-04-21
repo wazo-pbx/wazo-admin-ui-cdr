@@ -11,13 +11,10 @@ logger = logging.getLogger(__name__)
 
 class CdrService(object):
 
-    resource_calllogd = 'cdr'
-
     def list(self, limit=None, order=None, direction=None, offset=None, search=None, **kwargs):
-        resource_client = getattr(call_logd, self.resource_calllogd)
-        return resource_client.list(search=search,
-                                    order=order,
-                                    limit=limit,
-                                    direction=direction,
-                                    offset=offset,
-                                    **kwargs)
+        return call_logd.cdr.list(search=search,
+                                  order=order,
+                                  limit=limit,
+                                  direction=direction,
+                                  offset=offset,
+                                  **kwargs)
