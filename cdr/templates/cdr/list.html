@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block content_header %}
+  {{ build_breadcrumb('Cdr', '', 'newspaper-o', ['List']) }}
+{% endblock %}
+
+{% block content %}
+  <section class="content">
+    {% call build_list_containers('Cdrs', 'newspaper-o') %}
+      {% call build_list_table() %}
+        {% call build_list_table_headers() %}
+          <th>Date</th>
+          <th>Source</th>
+          <th>Source name</th>
+          <th>Destination</th>
+          <th>Destination name</th>
+          <th>Duration</th>
+          <th>Answer</th>
+        {% endcall %}
+        {% call(cdr) build_list_table_rows(resource_list['items']) %}
+          <td>{{ cdr.start }}</td>
+          <td>{{ cdr.source_extension }}</td>
+          <td>{{ cdr.source_name }}</td>
+          <td>{{ cdr.destination_extension }}</td>
+          <td>{{ cdr.destination_name }}</td>
+          <td>{{ cdr.duration }}</td>
+          <td>{{ cdr.answered }}</td>
+        {% endcall %}
+      {% endcall %}
+    {% endcall %}
+  </section>
+{% endblock %}

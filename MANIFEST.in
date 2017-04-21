@@ -1,0 +1,2 @@
+recursive-include cdr/templates *
+recursive-include cdr/static *
