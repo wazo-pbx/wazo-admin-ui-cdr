@@ -9,7 +9,7 @@ from flask_menu.classy import classy_menu_item
 from wazo_admin_ui.helpers.classful import BaseView
 
 
-class OutcallView(BaseView):
+class CdrView(BaseView):
 
     resource = 'cdr'
 
