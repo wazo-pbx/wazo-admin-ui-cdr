@@ -6,7 +6,7 @@
 
 {% block content %}
   <section class="content">
-    {% call build_list_containers('Cdrs', 'newspaper-o', size='12') %}
+    {% call build_list_containers('Cdrs', 'newspaper-o', size='12', add_button=False) %}
       {% call build_list_table(list=url_for('.CdrView:list_json')) %}
         {% call build_list_table_headers() %}
           <th>Date</th>
