@@ -1,6 +1,5 @@
-function create_list_table(list_url) {
+$(document).ready(function() {
   var table_config = {
-    ajax: list_url,
     columns: [
       { data: 'start' },
       { data: 'source_extension' },
@@ -12,4 +11,4 @@ function create_list_table(list_url) {
     ]
   };
   create_table_serverside(table_config);
-};
+});

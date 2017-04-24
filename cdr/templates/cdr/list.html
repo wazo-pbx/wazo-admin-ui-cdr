@@ -7,7 +7,7 @@
 {% block content %}
   <section class="content">
     {% call build_list_containers('Cdrs', 'newspaper-o') %}
-      {% call build_list_table(serverside=True) %}
+      {% call build_list_table(list=url_for('.CdrView:list_json')) %}
         {% call build_list_table_headers() %}
           <th>Date</th>
           <th>Source</th>
@@ -32,11 +32,5 @@
 {% endblock %}
 
 {% block additional_js %}
-  {% set list_url = url_for('.CdrView:list_json') %}
-  <script type="text/javascript">
-    $(document).ready(function() {
-        create_list_table('{{ list_url }}');
-    });
-  </script>
   <script src="{{ url_for('.static', filename='js/cdr.js') }}"></script>
 {% endblock %}
