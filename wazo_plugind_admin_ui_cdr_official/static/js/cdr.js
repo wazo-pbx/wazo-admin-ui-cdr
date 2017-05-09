@@ -1,5 +1,6 @@
 $(document).ready(function() {
   var table_config = {
+    select: true,
     columns: [
       { data: 'start' },
       { data: 'source_extension' },

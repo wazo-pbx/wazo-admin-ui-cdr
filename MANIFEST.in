@@ -1,2 +1,2 @@
-recursive-include cdr/templates *
-recursive-include cdr/static *
+recursive-include wazo_plugind_admin_ui_cdr_official/templates *
+recursive-include wazo_plugind_admin_ui_cdr_official/static *

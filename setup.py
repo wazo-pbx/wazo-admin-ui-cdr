@@ -23,7 +23,7 @@ setup(
 
     entry_points={
         'wazo_admin_ui.plugins': [
-            'cdr = cdr.plugin:Plugin',
+            'cdr = wazo_plugind_admin_ui_cdr_official.plugin:Plugin',
         ]
     }
 )
