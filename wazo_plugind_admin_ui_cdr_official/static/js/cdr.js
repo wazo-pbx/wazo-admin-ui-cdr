@@ -1,15 +1,17 @@
-$(document).ready(function() {
-  var table_config = {
+$(document).ready(function () {
+  let table_config = {
     select: true,
     columns: [
-      { data: 'start' },
-      { data: 'source_extension' },
-      { data: 'source_name' },
-      { data: 'destination_extension' },
-      { data: 'destination_name' },
-      { data: 'duration' },
-      { data: 'answered' },
+      {data: 'start'},
+      {data: 'source_extension'},
+      {data: 'source_name'},
+      {data: 'destination_extension'},
+      {data: 'destination_name'},
+      {data: 'duration'},
+      {data: 'answered'},
     ]
   };
-  create_table_serverside(table_config);
+
+  let Table = create_table_serverside(table_config);
+  Table.buttons(0, null).containers().appendTo('body');
 });
