@@ -8,7 +8,7 @@
   <section class="content">
     {% call build_list_containers('Cdr', 'newspaper-o', size='12') %}
       {% call build_list_table(list=url_for('.CdrView:list_json')) %}
-        {% call build_list_table_headers() %}
+        {% call build_list_table_headers(checkbox=False) %}
           <th>Date</th>
           <th>Source</th>
           <th>Source name</th>
@@ -17,7 +17,7 @@
           <th>Duration</th>
           <th>Answered</th>
         {% endcall %}
-        {% call(cdr) build_list_table_rows(resource_list['items']) %}
+        {% call(cdr) build_list_table_rows(resource_list['items'], checkbox=False) %}
           <td>{{ cdr.start }}</td>
           <td>{{ cdr.source_extension }}</td>
           <td>{{ cdr.source_name }}</td>

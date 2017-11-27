@@ -9,6 +9,9 @@ $(document).ready(function () {
       {data: 'destination_name'},
       {data: 'duration'},
       {data: 'answered'},
+    ],
+    columnDefs: [
+      {targets: 0}
     ]
   };
 
