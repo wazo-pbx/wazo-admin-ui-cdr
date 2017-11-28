@@ -15,6 +15,6 @@ $(document).ready(function () {
     ]
   };
 
-  let Table = create_table_serverside(table_config);
+  let Table = create_table_serverside(table_config, actions_column=false);
   Table.buttons(0, null).containers().appendTo('body');
 });
