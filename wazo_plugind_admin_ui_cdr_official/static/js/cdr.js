@@ -1,6 +1,6 @@
 $(document).ready(function () {
   let table_config = {
-    select: true,
+    buttons: [],
     columns: [
       {data: 'start'},
       {data: 'source_extension'},
@@ -12,6 +12,5 @@ $(document).ready(function () {
     ]
   };
 
-  let Table = create_table_serverside(table_config, actions_column=false);
-  Table.buttons(0, null).containers().appendTo('body');
+  let Table = create_table_serverside(table_config, actions_column=false, init_buttons=false, init_events=false);
 });
