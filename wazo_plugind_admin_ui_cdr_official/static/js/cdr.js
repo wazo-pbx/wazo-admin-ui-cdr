@@ -1,6 +1,8 @@
 $(document).ready(function () {
   let table_config = {
-    buttons: [],
+    buttons: [
+      'copy', 'csv', 'excel', 'pdf', 'print'
+    ],
     columns: [
       {data: 'start'},
       {data: 'source_extension'},
